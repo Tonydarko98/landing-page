@@ -1,13 +1,98 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --glow-hue: 30deg;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body {
+  height: 100%;
+  overflow-x: hidden;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-y: auto;
+}
+
+.animated-gradient {
+  background-image: linear-gradient(90deg, #e9760a, #db2020, #ffaf03, #f7d02c, #ee1249);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient-animation 3s linear infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.animate-blink {
+  animation: blink 1.6s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+.flag-container {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.flag-container:hover {
+  box-shadow: none;
+}
+
+@media (max-width: 1000px) {
+  .flag-container {
+    position: static !important;
+    transform: none !important;
+  }
+}
+
+.button, .button2 {
+  transition: all 0.3s ease;
+}
+
+.button:hover, .button2:hover {
+  scale: 1.05;
+  box-shadow: 0 4px 8px -2px hsl(var(--glow-hue) 50% 50% / 50%), 
+              0 0 20px 5px hsl(var(--glow-hue) 50% 70%);
+}
+
+.button:active, .button2:active {
+  scale: 0.95;
+}
+
+.shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    #000 25%,
+    #DE2910 50%,
+    #000 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-animation 2s linear infinite;
+}
+
+@keyframes shimmer-animation {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.button:hover .shimmer {
+  animation: shimmer-animation 1s linear infinite;
+}
+
