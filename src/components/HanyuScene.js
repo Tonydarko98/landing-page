@@ -46,8 +46,8 @@ function Model({ mousePosition, scale }) {
           roughnessMap: child.material.roughnessMap,
           metalnessMap: child.material.metalnessMap,
           envMapIntensity: 0.1,
-          roughness: 0.7,
-          metalness: 0.5,
+          roughness: 0.3,
+          metalness: 0.1,
         });
         if (child.material.map) child.material.map.colorSpace = SRGBColorSpace;
         child.material.needsUpdate = true;
@@ -96,8 +96,8 @@ function Model({ mousePosition, scale }) {
 
 const Effects = React.memo(() => (
   <EffectComposer multisampling={8}>
-    <SSAO radius={0.05} intensity={50} luminanceInfluence={0.5} color="black" />
-    <Bloom intensity={0.2} luminanceThreshold={0.9} luminanceSmoothing={0.08} />
+    <SSAO radius={0.04} intensity={50} luminanceInfluence={0.5} color="black" />
+    <Bloom intensity={0.1} luminanceThreshold={0.9} luminanceSmoothing={0.08} />
     <HueSaturation saturation={0.05} />
   </EffectComposer>
 ));
@@ -118,7 +118,7 @@ export default function HanyuScene() {
     } else if (viewport.isTablet) {
       return {
         scale: 0.8,
-        cameraPosition: [0, 14, 60],
+        cameraPosition: [0, 16, 60],
         focalLength: 60,
       };
     } else {
@@ -168,7 +168,7 @@ export default function HanyuScene() {
       <ambientLight intensity={lightIntensity} />
       <spotLight 
         position={[10, 20, 20]} 
-        angle={0.3} 
+        angle={0.5} 
         penumbra={1} 
         intensity={lightIntensity} 
         castShadow 

@@ -27,7 +27,7 @@ const Header = () => {
   // Check for inactivity
   useEffect(() => {
     const inactivityTimeout = 3000; // 3 seconds of inactivity before hiding
-    
+
     const checkInactivity = () => {
       const currentTime = Date.now();
       if (currentTime - lastActivityTime > inactivityTimeout && window.scrollY > 100) {
@@ -49,14 +49,14 @@ const Header = () => {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
           const scrollingUp = currentScrollY < lastScrollY;
-          
+
           if (scrollingUp || currentScrollY < 10) {
             setIsVisible(true);
             updateLastActivity();
           } else if (currentScrollY > 100 && currentScrollY > lastScrollY) {
             setIsVisible(false);
           }
-          
+
           lastScrollY = currentScrollY;
           ticking = false;
         });
@@ -91,9 +91,9 @@ const Header = () => {
   }, [isMobile, updateLastActivity]);
 
   const menuVariants = {
-    hidden: { 
+    hidden: {
       x: "100%",
-      opacity: 0 
+      opacity: 0
     },
     visible: {
       x: "0%",
@@ -107,7 +107,7 @@ const Header = () => {
   };
 
   const headerVariants = {
-    hidden: { 
+    hidden: {
       y: "-100%",
       transition: {
         type: "spring",
@@ -115,7 +115,7 @@ const Header = () => {
         stiffness: 200
       }
     },
-    visible: { 
+    visible: {
       y: "0%",
       transition: {
         type: "spring",
@@ -134,12 +134,12 @@ const Header = () => {
   };
 
   const childVariants = {
-    hidden: { 
-      y: 20, 
-      opacity: 0 
+    hidden: {
+      y: 20,
+      opacity: 0
     },
-    visible: { 
-      y: 0, 
+    visible: {
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
@@ -150,19 +150,18 @@ const Header = () => {
   };
 
   return (
-    <motion.header 
+    <motion.header
       className={`fixed top-0 left-0 right-0 z-50 ${!isMobile && 'py-4'}`}
       initial="visible"
       animate={isVisible ? "visible" : "hidden"}
       variants={headerVariants}
     >
-      {/* Rest of the component remains the same */}
       <nav className={`relative ${!isMobile && 'mx-auto bg-white bg-opacity-90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg w-[95%] max-w-6xl'}`}>
         {/* Desktop Version */}
         {!isMobile && (
           <div className="flex items-center justify-between">
-            <motion.a 
-              href="#home" 
+            <motion.a
+              href="#home"
               className="flex-shrink-0 mr-8"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -172,19 +171,19 @@ const Header = () => {
 
             <motion.ul className="flex items-center space-x-6 flex-grow justify-between">
               {['Home', 'Nosotros', 'Planes', 'Traductor', 'Blog', 'FAQs'].map((item) => (
-                <motion.li 
+                <motion.li
                   key={item}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <a 
-                    href={`#${item.toLowerCase()}`} 
+                  <a
+                    href={`#${item.toLowerCase()}`}
                     className="text-gray-800 font-semibold text-sm hover:text-red-600 transition-colors"
                   >
                     {item}
                   </a>
                 </motion.li>
               ))}
-              
+
               <div className="flex items-center space-x-2">
                 <motion.a
                   href="User.html"
@@ -210,21 +209,21 @@ const Header = () => {
         {/* Mobile Version */}
         {isMobile && (
           <>
-            <motion.div 
+            <motion.div
               className="fixed top-4 right-4 z-50 bg-white p-3 rounded-full shadow-lg cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <motion.div 
+              <motion.div
                 className="w-6 h-0.5 bg-gray-800 mb-1.5"
                 animate={isMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
               />
-              <motion.div 
+              <motion.div
                 className="w-6 h-0.5 bg-gray-800 mb-1.5"
                 animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
               />
-              <motion.div 
+              <motion.div
                 className="w-6 h-0.5 bg-gray-800"
                 animate={isMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
               />
@@ -233,19 +232,19 @@ const Header = () => {
             <AnimatePresence>
               {isMenuOpen && (
                 <motion.div
-                  className="fixed inset-y-0 right-0 w-64 bg-white shadow-lg"
+                  className="fixed inset-y-0 right-0 w-60 bg-white shadow-lg"
                   variants={menuVariants}
                   initial="hidden"
                   animate="visible"
                   exit="hidden"
                 >
-                  <motion.div 
+                  <motion.div
                     className="flex flex-col h-full p-8"
                     variants={staggerChildren}
                     initial="hidden"
                     animate="visible"
                   >
-                    <motion.div 
+                    <motion.div
                       variants={childVariants}
                       className="flex justify-center mb-8"
                     >
