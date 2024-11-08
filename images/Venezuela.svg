@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="flag-icons-ve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00247d;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #cf142b;
+      }
+
+      .cls-4 {
+        fill: #fc0;
+      }
+    </style>
+  </defs>
+  <path class="cls-3" d="m0,320h640v160H0v-160Z"/>
+  <path class="cls-1" d="m.04,160h639.96v160H.04v-160Z"/>
+  <path class="cls-4" d="m0,0h640v160H0V0Z"/>
+  <g>
+    <g id="ve-f">
+      <g id="ve-e">
+        <g id="ve-d">
+          <g id="ve-c">
+            <g id="ve-b">
+              <path id="ve-a" class="cls-2" d="m348.48,174.49l-9.24,17.87,10.4,5.49-1.16-23.36Z"/>
+              <path id="ve-a-2" data-name="ve-a" class="cls-2" d="m348.48,174.49l2.57,19.95-11.65,1.6,9.08-21.55Z"/>
+            </g>
+            <g id="ve-b-2" data-name="ve-b">
+              <path id="ve-a-3" data-name="ve-a" class="cls-2" d="m364.81,191.4l-19.85-3.27-2.01,11.59,21.85-8.32Z"/>
+              <path id="ve-a-4" data-name="ve-a" class="cls-2" d="m364.81,191.4l-18.18,8.61-5.12-10.59,23.3,1.98Z"/>
+            </g>
+          </g>
+          <g id="ve-b-3" data-name="ve-b">
+            <path id="ve-a-5" data-name="ve-a" class="cls-2" d="m327.35,184.8l14.14,14.31,8.44-8.2-22.57-6.11Z"/>
+            <path id="ve-a-6" data-name="ve-a" class="cls-2" d="m327.35,184.8l19.77,3.72-2.08,11.58-17.69-15.3Z"/>
+          </g>
+          <g id="ve-c-2" data-name="ve-c">
+            <g id="ve-b-4" data-name="ve-b">
+              <path id="ve-a-7" data-name="ve-a" class="cls-2" d="m353.77,212.16l-3.02-19.89-11.64,1.67,14.67,18.21Z"/>
+              <path id="ve-a-8" data-name="ve-a" class="cls-2" d="m353.77,212.16l-13.81-14.63,8.49-8.15,5.32,22.77Z"/>
+            </g>
+            <g id="ve-b-5" data-name="ve-b">
+              <path id="ve-a-9" data-name="ve-a" class="cls-2" d="m330.62,208.08l17.98-9.02-5.19-10.56-12.79,19.58Z"/>
+              <path id="ve-a-10" data-name="ve-a" class="cls-2" d="m330.62,208.08l9.64-17.65,10.37,5.56-20.01,12.1Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="ve-d-2" data-name="ve-d">
+          <g id="ve-c-3" data-name="ve-c">
+            <g id="ve-b-6" data-name="ve-b">
+              <path id="ve-a-11" data-name="ve-a" class="cls-2" d="m402,193.97l-14.8,13.63,7.9,8.72,6.9-22.35Z"/>
+              <path id="ve-a-12" data-name="ve-a" class="cls-2" d="m402,193.97l-4.4,19.63-11.5-2.48,15.9-17.15Z"/>
+            </g>
+            <g id="ve-b-7" data-name="ve-b">
+              <path id="ve-a-13" data-name="ve-a" class="cls-2" d="m411.56,215.45l-17.53-9.86-5.85,10.21,23.38-.35Z"/>
+              <path id="ve-a-14" data-name="ve-a" class="cls-2" d="m411.56,215.45l-20.03,1.88-1.19-11.7,21.22,9.83Z"/>
+            </g>
+          </g>
+          <g id="ve-b-8" data-name="ve-b">
+            <path id="ve-a-15" data-name="ve-a" class="cls-2" d="m378.62,196.43l8.39,18.28,10.73-4.82-19.12-13.46Z"/>
+            <path id="ve-a-16" data-name="ve-a" class="cls-2" d="m378.62,196.43l17.31,10.25-5.91,10.17-11.39-20.42Z"/>
+          </g>
+          <g id="ve-c-4" data-name="ve-c">
+            <g id="ve-b-9" data-name="ve-b">
+              <path id="ve-a-17" data-name="ve-a" class="cls-2" d="m394.09,231.18l3.96-19.72-11.51-2.41,7.55,22.13Z"/>
+              <path id="ve-a-18" data-name="ve-a" class="cls-2" d="m394.09,231.18l-7.97-18.47,10.76-4.75-2.79,23.22Z"/>
+            </g>
+            <g id="ve-b-10" data-name="ve-b">
+              <path id="ve-a-19" data-name="ve-a" class="cls-2" d="m373.73,219.43l19.98-2.33-1.27-11.7-18.71,14.02Z"/>
+              <path id="ve-a-20" data-name="ve-a" class="cls-2" d="m373.73,219.43l15.1-13.29,7.84,8.77-22.94,4.52Z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="ve-e-2" data-name="ve-e">
+        <g id="ve-d-3" data-name="ve-d">
+          <g id="ve-c-5" data-name="ve-c">
+            <g id="ve-b-11" data-name="ve-b">
+              <polygon class="cls-2" points="447.27 254.04 433.1 250.33 425.47 262.84 424.62 248.22 410.36 244.83 424.01 239.5 422.82 224.89 432.11 236.23 445.63 230.58 437.73 242.92 447.27 254.04"/>
+            </g>
+          </g>
+        </g>
+        <g id="ve-d-4" data-name="ve-d">
+          <g id="ve-c-6" data-name="ve-c">
+            <g id="ve-b-12" data-name="ve-b">
+              <path id="ve-a-21" data-name="ve-a" class="cls-2" d="m474.11,279.91l-20.09.93.45,11.76,19.65-12.68Z"/>
+              <path id="ve-a-22" data-name="ve-a" class="cls-2" d="m474.11,279.91l-15.99,12.2-7.21-9.29,23.2-2.91Z"/>
+            </g>
+            <g id="ve-b-13" data-name="ve-b">
+              <path id="ve-a-23" data-name="ve-a" class="cls-2" d="m467.63,302.51l-7.09-18.82-11.04,4.06,18.13,14.77Z"/>
+              <path id="ve-a-24" data-name="ve-a" class="cls-2" d="m467.63,302.51l-16.55-11.44,6.61-9.73,9.94,21.17Z"/>
+            </g>
+          </g>
+          <g id="ve-b-14" data-name="ve-b">
+            <path id="ve-a-25" data-name="ve-a" class="cls-2" d="m454.62,266.76l-5.33,19.4,11.32,3.21-5.99-22.6Z"/>
+            <path id="ve-a-26" data-name="ve-a" class="cls-2" d="m454.62,266.76l6.67,18.98-11.07,3.99,4.4-22.97Z"/>
+          </g>
+          <g id="ve-c-7" data-name="ve-c">
+            <g id="ve-b-15" data-name="ve-b">
+              <path id="ve-a-27" data-name="ve-a" class="cls-2" d="m444.13,303.33l15.71-12.56-7.27-9.25-8.44,21.81Z"/>
+              <path id="ve-a-28" data-name="ve-a" class="cls-2" d="m444.13,303.33l5.76-19.27,11.3,3.28-17.06,15.99Z"/>
+            </g>
+            <g id="ve-b-16" data-name="ve-b">
+              <path id="ve-a-29" data-name="ve-a" class="cls-2" d="m436.09,281.24l16.8,11.06,6.55-9.77-23.35-1.29Z"/>
+              <path id="ve-a-30" data-name="ve-a" class="cls-2" d="m436.09,281.24l20.11-.48.37,11.76-20.48-11.28Z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="ve-f-2" data-name="ve-f">
+      <g id="ve-e-3" data-name="ve-e">
+        <g id="ve-d-5" data-name="ve-d">
+          <g id="ve-c-8" data-name="ve-c">
+            <g id="ve-b-17" data-name="ve-b">
+              <path id="ve-a-31" data-name="ve-a" class="cls-2" d="m165.89,279.91l15.99,12.2,7.21-9.29-23.2-2.91Z"/>
+              <path id="ve-a-32" data-name="ve-a" class="cls-2" d="m165.89,279.91l20.09.93-.45,11.76-19.65-12.68Z"/>
+            </g>
+            <g id="ve-b-18" data-name="ve-b">
+              <path id="ve-a-33" data-name="ve-a" class="cls-2" d="m185.38,266.76l-6.67,18.98,11.07,3.99-4.4-22.97Z"/>
+              <path id="ve-a-34" data-name="ve-a" class="cls-2" d="m185.38,266.76l5.33,19.4-11.32,3.21,5.99-22.6Z"/>
+            </g>
+          </g>
+          <g id="ve-b-19" data-name="ve-b">
+            <path id="ve-a-35" data-name="ve-a" class="cls-2" d="m172.37,302.51l16.55-11.44-6.61-9.73-9.94,21.17Z"/>
+            <path id="ve-a-36" data-name="ve-a" class="cls-2" d="m172.37,302.51l7.09-18.82,11.04,4.06-18.13,14.77Z"/>
+          </g>
+          <g id="ve-c-9" data-name="ve-c">
+            <g id="ve-b-20" data-name="ve-b">
+              <path id="ve-a-37" data-name="ve-a" class="cls-2" d="m203.91,281.24l-20.11-.48-.37,11.76,20.48-11.28Z"/>
+              <path id="ve-a-38" data-name="ve-a" class="cls-2" d="m203.91,281.24l-16.8,11.06-6.55-9.77,23.35-1.29Z"/>
+            </g>
+            <g id="ve-b-21" data-name="ve-b">
+              <path id="ve-a-39" data-name="ve-a" class="cls-2" d="m195.87,303.33l-5.76-19.27-11.3,3.28,17.06,15.99Z"/>
+              <path id="ve-a-40" data-name="ve-a" class="cls-2" d="m195.87,303.33l-15.71-12.56,7.27-9.25,8.44,21.81Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="ve-d-6" data-name="ve-d">
+          <g id="ve-c-10" data-name="ve-c">
+            <g id="ve-b-22" data-name="ve-b">
+              <path id="ve-a-41" data-name="ve-a" class="cls-2" d="m194.37,230.58l10.85,16.94,9.96-6.27-20.81-10.67Z"/>
+              <path id="ve-a-42" data-name="ve-a" class="cls-2" d="m194.37,230.58l18.56,7.75-4.44,10.89-14.12-18.64Z"/>
+            </g>
+            <g id="ve-b-23" data-name="ve-b">
+              <path id="ve-a-43" data-name="ve-a" class="cls-2" d="m217.18,224.89l-12.76,15.55,9.04,7.53,3.72-23.09Z"/>
+              <path id="ve-a-44" data-name="ve-a" class="cls-2" d="m217.18,224.89l-1.63,20.05-11.73-.86,13.36-19.19Z"/>
+            </g>
+          </g>
+          <g id="ve-b-24" data-name="ve-b">
+            <path id="ve-a-45" data-name="ve-a" class="cls-2" d="m192.73,254.04l19.46-5.09-2.88-11.41-16.58,16.49Z"/>
+            <path id="ve-a-46" data-name="ve-a" class="cls-2" d="m192.73,254.04l13.1-15.26,8.99,7.59-22.09,7.67Z"/>
+          </g>
+          <g id="ve-c-11" data-name="ve-c">
+            <g id="ve-b-25" data-name="ve-b">
+              <path id="ve-a-47" data-name="ve-a" class="cls-2" d="m229.64,244.83l-18.73-7.32-4.37,10.92,23.11-3.6Z"/>
+              <path id="ve-a-48" data-name="ve-a" class="cls-2" d="m229.64,244.83l-19.57,4.65-2.81-11.42,22.38,6.78Z"/>
+            </g>
+            <g id="ve-b-26" data-name="ve-b">
+              <path id="ve-a-49" data-name="ve-a" class="cls-2" d="m214.53,262.84l1.18-20.08-11.74-.78,10.56,20.86Z"/>
+              <path id="ve-a-50" data-name="ve-a" class="cls-2" d="m214.53,262.84l-10.47-17.18,10-6.2.47,23.38Z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="ve-e-4" data-name="ve-e">
+        <g id="ve-d-7" data-name="ve-d">
+          <g id="ve-c-12" data-name="ve-c">
+            <g id="ve-b-27" data-name="ve-b">
+              <path id="ve-a-51" data-name="ve-a" class="cls-2" d="m238,193.97l4.4,19.63,11.5-2.48-15.9-17.15Z"/>
+              <path id="ve-a-52" data-name="ve-a" class="cls-2" d="m238,193.97l14.8,13.63-7.9,8.72-6.9-22.35Z"/>
+            </g>
+            <g id="ve-b-28" data-name="ve-b">
+              <path id="ve-a-53" data-name="ve-a" class="cls-2" d="m261.38,196.43l-17.31,10.25,5.91,10.17,11.39-20.42Z"/>
+              <path id="ve-a-54" data-name="ve-a" class="cls-2" d="m261.38,196.43l-8.39,18.28-10.73-4.82,19.12-13.46Z"/>
+            </g>
+          </g>
+          <g id="ve-b-29" data-name="ve-b">
+            <path id="ve-a-55" data-name="ve-a" class="cls-2" d="m228.44,215.45l20.03,1.88,1.19-11.7-21.22,9.83Z"/>
+            <path id="ve-a-56" data-name="ve-a" class="cls-2" d="m228.44,215.45l17.53-9.86,5.85,10.21-23.38-.35Z"/>
+          </g>
+          <g id="ve-c-13" data-name="ve-c">
+            <g id="ve-b-30" data-name="ve-b">
+              <path id="ve-a-57" data-name="ve-a" class="cls-2" d="m266.27,219.43l-15.1-13.29-7.84,8.77,22.94,4.52Z"/>
+              <path id="ve-a-58" data-name="ve-a" class="cls-2" d="m266.27,219.43l-19.98-2.33,1.27-11.7,18.71,14.02Z"/>
+            </g>
+            <g id="ve-b-31" data-name="ve-b">
+              <path id="ve-a-59" data-name="ve-a" class="cls-2" d="m245.91,231.18l7.97-18.47-10.76-4.75,2.79,23.22Z"/>
+              <path id="ve-a-60" data-name="ve-a" class="cls-2" d="m245.91,231.18l-3.96-19.72,11.51-2.41-7.55,22.13Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="ve-d-8" data-name="ve-d">
+          <g id="ve-c-14" data-name="ve-c">
+            <g id="ve-b-32" data-name="ve-b">
+              <path id="ve-a-61" data-name="ve-a" class="cls-2" d="m291.52,174.49l-2.57,19.95,11.65,1.6-9.08-21.55Z"/>
+              <path id="ve-a-62" data-name="ve-a" class="cls-2" d="m291.52,174.49l9.24,17.87-10.4,5.49,1.16-23.36Z"/>
+            </g>
+            <g id="ve-b-33" data-name="ve-b">
+              <path id="ve-a-63" data-name="ve-a" class="cls-2" d="m312.65,184.8l-19.77,3.72,2.08,11.58,17.69-15.3Z"/>
+              <path id="ve-a-64" data-name="ve-a" class="cls-2" d="m312.65,184.8l-14.14,14.31-8.44-8.2,22.57-6.11Z"/>
+            </g>
+          </g>
+          <g id="ve-b-34" data-name="ve-b">
+            <path id="ve-a-65" data-name="ve-a" class="cls-2" d="m275.19,191.4l18.18,8.61,5.12-10.59-23.3,1.98Z"/>
+            <path id="ve-a-66" data-name="ve-a" class="cls-2" d="m275.19,191.4l19.85-3.27,2.01,11.59-21.85-8.32Z"/>
+          </g>
+          <g id="ve-c-15" data-name="ve-c">
+            <g id="ve-b-35" data-name="ve-b">
+              <path id="ve-a-67" data-name="ve-a" class="cls-2" d="m309.38,208.08l-9.64-17.65-10.37,5.56,20.01,12.1Z"/>
+              <path id="ve-a-68" data-name="ve-a" class="cls-2" d="m309.38,208.08l-17.98-9.02,5.19-10.56,12.79,19.58Z"/>
+            </g>
+            <g id="ve-b-36" data-name="ve-b">
+              <path id="ve-a-69" data-name="ve-a" class="cls-2" d="m286.23,212.16l13.81-14.63-8.49-8.15-5.32,22.77Z"/>
+              <path id="ve-a-70" data-name="ve-a" class="cls-2" d="m286.23,212.16l3.02-19.89,11.64,1.67-14.67,18.21Z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
