@@ -252,7 +252,11 @@ const Header = () => {
                       variants={childVariants}
                       className="flex justify-center mb-8"
                     >
-                      <img src="/images/icon.png" alt="Logo" className="w-14 h-12" />
+                      <img 
+  src={`${process.env.PUBLIC_URL}/images/icon.png`} 
+  alt="Logo" 
+  className="w-14 h-12 object-contain"
+/>
                     </motion.div>
 
                     {['Home', 'Nosotros', 'Planes', 'Traductor', 'Blog', 'FAQs'].map((item) => (
