@@ -1,19 +1,20 @@
+// App.jsx
 import React, { useEffect, useState, Suspense } from 'react';
+import { motion } from 'framer-motion';
 import CustomCursor from './components/CustomCursor';
 import Header from './components/Header';
 import Home from './components/Home';
 import ThreeCanvas from './components/ThreeCanvas';
-import Loader from './components/Loader'; // Importa el componente Loader
+import Loader from './components/Loader';
 import Nosotros from './components/Nosotros';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simular el tiempo de carga (puedes reemplazar esto con lógica real de carga)
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // 3 segundos de carga
+    }, 3000);
   }, []);
 
   useEffect(() => {
@@ -24,23 +25,23 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App relative">
-      {isLoading ? ( 
-        <Loader /> // Mostrar la pantalla de carga mientras `isLoading` es true
+    <motion.div className="App relative">
+      {isLoading ? (
+        <Loader />
       ) : (
         <>
           <CustomCursor />
-          <Suspense fallback={<Loader />}> {/* Usa el loader como fallback */}
+          <Suspense fallback={<Loader />}>
             <ThreeCanvas />
           </Suspense>
-          <div className="content z-10 relative">
+          <motion.div className="content z-10 relative">
             <Header />
             <Home />
             <Nosotros />
-          </div>
+          </motion.div>
         </>
       )}
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,8 +1,13 @@
-import React from 'react';
+// ThreeCanvas.jsx
+import React, { useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
+import { motion } from 'framer-motion';
 import HanyuScene from './HanyuScene';
+import { useScroll } from 'framer-motion';
 
 const ThreeCanvas = () => {
+  const { scrollY } = useScroll();
+
   return (
     <Canvas
       style={{
@@ -15,7 +20,7 @@ const ThreeCanvas = () => {
       }}
       camera={{ position: [0, 0, 5], fov: 50 }}
     >
-      <HanyuScene />
+      <HanyuScene scrollY={scrollY} />
     </Canvas>
   );
 };

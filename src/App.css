@@ -1,8 +1,56 @@
-.App {
-  text-align: center;
-  flex: 1;
+/* Estructura base */
+html, body {
+  height: 100%;  /* Asegura que el cuerpo ocupe el 100% de la pantalla */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;  /* Fuente global */
 }
 
+body {
+  overflow-y: auto;
+}
+
+/* Aplicamos un gradiente animado al fondo */
+.animated-gradient {
+  background-image: linear-gradient(90deg, #e9760a, #db2020, #ffaf03, #f7d02c, #ee1249);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: gradient-animation 3s linear infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Contenedor principal */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;  /* Ocupa toda la altura */
+  align-items: center;
+  justify-content: center;  /* Centra el contenido */
+  position: relative;
+}
+
+/* Contenedor con fondo animado */
+.App-header {
+  background: #282c34;
+  min-height: 100vh;  /* Ocupa el 100% de la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 100;
+  width: 100%;
+}
+
+/* Ajustes de logo animado */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,22 +62,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  z-index: 100;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -39,4 +71,14 @@
   }
 }
 
+/* Estilos del fondo */
+body {
+  background: linear-gradient(90deg, #e9760a, #db2020, #ffaf03, #f7d02c, #ee1249);
+  background-size: 200% auto;
+  animation: gradient-animation 3s linear infinite;
+}
 
+/* TailwindCSS Imports */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

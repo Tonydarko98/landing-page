@@ -107,28 +107,28 @@ export default function HanyuScene() {
   const { gl, camera, scene } = useThree();
   const viewport = useViewport();
 
-  // Configuraciones responsivas
-  const getResponsiveConfig = () => {
-    if (viewport.isMobile) {
-      return {
-        scale: 0.6,
-        cameraPosition: [0, 11, 7],
-        focalLength: 24,
-      };
-    } else if (viewport.isTablet) {
-      return {
-        scale: 0.8,
-        cameraPosition: [0, 16, 60],
-        focalLength: 60,
-      };
-    } else {
-      return {
-        scale: 1,
-        cameraPosition: [0, 24, 50],
-        focalLength: 30,
-      };
-    }
-  };
+// Configuraciones responsivas
+const getResponsiveConfig = () => {
+  if (viewport.isMobile) {
+    return {
+      scale: 0.6,
+      cameraPosition: [0, 11, 7],
+      focalLength: 24,
+    };
+  } else if (viewport.isTablet) {
+    return {
+      scale: 0.8,
+      cameraPosition: [0, 16, 60],
+      focalLength: 60,
+    };
+  } else {
+    return {
+      scale: 1,
+      cameraPosition: [0, 24, 50],
+      focalLength: 30,
+    };
+  }
+};
 
   const config = getResponsiveConfig();
 
