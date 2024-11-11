@@ -4,14 +4,14 @@ import Flag from './Flag';
 
 // Datos estáticos de banderas
 const flagsData = [
-  { id: 'flag1', src: '/images/Ecuador.svg', alt: 'Ecuador' },
-  { id: 'flag2', src: '/images/Mexico.svg', alt: 'Mexico' },
-  { id: 'flag3', src: '/images/Colombia.svg', alt: 'Colombia' },
-  { id: 'flag4', src: '/images/Peru.svg', alt: 'Peru' },
-  { id: 'flag5', src: '/images/Venezuela.svg', alt: 'Venezuela' },
-  { id: 'flag6', src: '/images/Argentina.svg', alt: 'Argentina' },
-  { id: 'flag7', src: '/images/Bolivia.svg', alt: 'Bolivia' },
-  { id: 'flag8', src: '/images/Chile.svg', alt: 'Chile' },
+  { id: 'flag1', src: `${process.env.PUBLIC_URL}/images/Ecuador.svg`, alt: 'Ecuador' },
+  { id: 'flag2', src: `${process.env.PUBLIC_URL}/images/Mexico.svg`, alt: 'Mexico' },
+  { id: 'flag3', src: `${process.env.PUBLIC_URL}/images/Colombia.svg`, alt: 'Colombia' },
+  { id: 'flag4', src: `${process.env.PUBLIC_URL}/images/Peru.svg`, alt: 'Peru' },
+  { id: 'flag5', src: `${process.env.PUBLIC_URL}/images/Venezuela.svg`, alt: 'Venezuela' },
+  { id: 'flag6', src: `${process.env.PUBLIC_URL}/images/Argentina.svg`, alt: 'Argentina' },
+  { id: 'flag7', src: `${process.env.PUBLIC_URL}/images/Bolivia.svg`, alt: 'Bolivia' },
+  { id: 'flag8', src: `${process.env.PUBLIC_URL}/images/Chile.svg`, alt: 'Chile' },
 ];
 
 // Componente de texto con efecto de escritura
@@ -195,7 +195,11 @@ const Home = () => {
           >
             <div className="shimmer"></div>
             <span className="relative z-10">
-              <img src="/images/graduation-cap-fill.svg" alt="Learn Icon" className="inline-block w-4 h-4 mr-2" />
+            <img 
+  src={`${process.env.PUBLIC_URL}/images/graduation-cap-fill.svg`} 
+  alt="Learn Icon" 
+  className="inline-block w-4 h-4 mr-2" 
+/>
               QUIERO APRENDER
             </span>
           </motion.button>
@@ -208,7 +212,11 @@ const Home = () => {
             whileTap={{ scale: 0.95 }}
           >
             <span className="relative z-10">
-              <img src="/images/play-circle-line.svg" alt="Play Icon" className="inline-block w-4 h-4 mr-2" />
+            <img 
+  src={`${process.env.PUBLIC_URL}/images/play-circle-line.svg`} 
+  alt="Play Icon" 
+  className="inline-block w-4 h-4 mr-2" 
+/>
               VIDEO
             </span>
           </motion.button>

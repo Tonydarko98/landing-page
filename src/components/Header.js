@@ -166,7 +166,11 @@ const Header = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <img src="/images/icon.png" alt="Logo" className="w-10 h-8" />
+              <img 
+  src={`${process.env.PUBLIC_URL}/images/icon.png`} 
+  alt="Logo" 
+  className="w-10 h-8 object-contain"
+/>
             </motion.a>
 
             <motion.ul className="flex items-center space-x-6 flex-grow justify-between">

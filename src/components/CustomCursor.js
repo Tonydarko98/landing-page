@@ -29,7 +29,7 @@ const CustomCursor = () => {
     let animationFrameId;
 
     const cursorImage = new Image();
-    cursorImage.src = '/images/Iconocursor.png';
+    cursorImage.src = `${process.env.PUBLIC_URL}/images/Iconocursor.png`;
     cursorImageRef.current = cursorImage;
 
     const params = {

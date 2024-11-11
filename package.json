@@ -2,6 +2,7 @@
   "name": "landing-page",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tonydarko98.github.io/landing-page/",
   "dependencies": {
     "@react-three/drei": "^9.111.2",
     "@react-three/fiber": "^8.17.5",
@@ -14,8 +15,7 @@
     "react-dom": "^18.3.1",
     "react-scripts": "^5.0.1",
     "three": "^0.167.1",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://tonydarko98.github.io/landing-page/"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -5,7 +5,7 @@ import { EffectComposer, SSAO, Bloom, HueSaturation } from '@react-three/postpro
 import { MeshStandardMaterial, SRGBColorSpace } from 'three';
 import * as THREE from 'three';
 
-const MODEL_PATH = '/assets/models/static/Hanyu.glb';
+const MODEL_PATH = process.env.PUBLIC_URL + '/assets/models/static/Hanyu.glb';
 
 // Hook personalizado para detectar el viewport
 const useViewport = () => {
