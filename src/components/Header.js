@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Header = () => {
+const Header = ({ setCurrentSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [lastActivityTime, setLastActivityTime] = useState(Date.now());
 
   // Check if mobile
@@ -26,7 +25,7 @@ const Header = () => {
 
   // Check for inactivity
   useEffect(() => {
-    const inactivityTimeout = 3000; // 3 seconds of inactivity before hiding
+    const inactivityTimeout = 3000;
 
     const checkInactivity = () => {
       const currentTime = Date.now();
@@ -149,6 +148,15 @@ const Header = () => {
     }
   };
 
+  const handleNavigation = (section) => {
+    setCurrentSection(section.toLowerCase());
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  const navigationItems = ['Home', 'Nosotros', 'Planes', 'Traductor', 'Blog', 'FAQs'];
+
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 ${!isMobile && 'py-4'}`}
@@ -160,51 +168,51 @@ const Header = () => {
         {/* Desktop Version */}
         {!isMobile && (
           <div className="flex items-center justify-between">
-            <motion.a
-              href="#home"
-              className="flex-shrink-0 mr-8"
+            <motion.button
+              onClick={() => handleNavigation('home')}
+              className="flex-shrink-0 mr-8 cursor-none"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
               <img 
-  src={`${process.env.PUBLIC_URL}/images/icon.png`} 
-  alt="Logo" 
-  className="w-10 h-8 object-contain"
-/>
-            </motion.a>
+                src={`${process.env.PUBLIC_URL}/images/icon.png`} 
+                alt="Logo" 
+                className="w-10 h-8 object-contain"
+              />
+            </motion.button>
 
             <motion.ul className="flex items-center space-x-6 flex-grow justify-between">
-              {['Home', 'Nosotros', 'Planes', 'Traductor', 'Blog', 'FAQs'].map((item) => (
+              {navigationItems.map((item) => (
                 <motion.li
                   key={item}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="text-gray-800 font-semibold text-sm hover:text-red-600 transition-colors"
+                  <button
+                    onClick={() => handleNavigation(item)}
+                    className="text-gray-800 font-semibold text-sm hover:text-red-600 transition-colors cursor-none"
                   >
                     {item}
-                  </a>
+                  </button>
                 </motion.li>
               ))}
 
               <div className="flex items-center space-x-2">
-                <motion.a
-                  href="User.html"
-                  className="bg-black text-white px-4 py-2 rounded-full text-sm"
+                <motion.button
+                  onClick={() => handleNavigation('login')}
+                  className="bg-black text-white px-4 py-2 rounded-full text-sm cursor-none"
                   whileHover={{ scale: 1.05, backgroundColor: "#ef4444" }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Log In
-                </motion.a>
-                <motion.a
-                  href="test.html"
-                  className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm"
+                </motion.button>
+                <motion.button
+                  onClick={() => handleNavigation('test')}
+                  className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm cursor-none"
                   whileHover={{ scale: 1.05, backgroundColor: "#ef4444", color: "white" }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Analiza tu Nivel
-                </motion.a>
+                </motion.button>
               </div>
             </motion.ul>
           </div>
@@ -214,7 +222,7 @@ const Header = () => {
         {isMobile && (
           <>
             <motion.div
-              className="fixed top-4 right-4 z-50 bg-white p-3 rounded-full shadow-lg cursor-pointer"
+              className="fixed top-4 right-4 z-50 bg-white p-3 rounded-full shadow-lg cursor-none"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -248,47 +256,48 @@ const Header = () => {
                     initial="hidden"
                     animate="visible"
                   >
-                    <motion.div
+                    <motion.button
                       variants={childVariants}
-                      className="flex justify-center mb-8"
+                      className="flex justify-center mb-8 cursor-none"
+                      onClick={() => handleNavigation('home')}
                     >
                       <img 
-  src={`${process.env.PUBLIC_URL}/images/icon.png`} 
-  alt="Logo" 
-  className="w-14 h-12 object-contain"
-/>
-                    </motion.div>
+                        src={`${process.env.PUBLIC_URL}/images/icon.png`} 
+                        alt="Logo" 
+                        className="w-14 h-12 object-contain"
+                      />
+                    </motion.button>
 
-                    {['Home', 'Nosotros', 'Planes', 'Traductor', 'Blog', 'FAQs'].map((item) => (
-                      <motion.a
+                    {navigationItems.map((item) => (
+                      <motion.button
                         key={item}
-                        href={`#${item.toLowerCase()}`}
-                        className="py-3 text-gray-800 font-semibold text-lg hover:text-red-600 transition-colors"
+                        onClick={() => handleNavigation(item)}
+                        className="py-3 text-gray-800 font-semibold text-lg hover:text-red-600 transition-colors cursor-none"
                         variants={childVariants}
                       >
                         {item}
-                      </motion.a>
+                      </motion.button>
                     ))}
 
                     <div className="mt-auto space-y-4">
-                      <motion.a
+                      <motion.button
                         variants={childVariants}
-                        href="User.html"
-                        className="block w-full bg-black text-white py-3 rounded-full text-center text-sm"
+                        onClick={() => handleNavigation('login')}
+                        className="block w-full bg-black text-white py-3 rounded-full text-center text-sm cursor-none"
                         whileHover={{ scale: 1.05, backgroundColor: "#ef4444" }}
                         whileTap={{ scale: 0.95 }}
                       >
                         Log In
-                      </motion.a>
-                      <motion.a
+                      </motion.button>
+                      <motion.button
                         variants={childVariants}
-                        href="test.html"
-                        className="block w-full bg-yellow-400 text-black py-3 rounded-full text-center text-sm"
+                        onClick={() => handleNavigation('test')}
+                        className="block w-full bg-yellow-400 text-black py-3 rounded-full text-center text-sm cursor-none"
                         whileHover={{ scale: 1.05, backgroundColor: "#ef4444", color: "white" }}
                         whileTap={{ scale: 0.95 }}
                       >
                         Analiza tu Nivel
-                      </motion.a>
+                      </motion.button>
                     </div>
                   </motion.div>
                 </motion.div>
