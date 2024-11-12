@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useEffect, useState, Suspense, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CustomCursor from './components/CustomCursor';
 import Header from './components/Header';
@@ -10,6 +10,8 @@ import Nosotros from './components/Nosotros';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentSection, setCurrentSection] = useState('home');
+  const sectionsRef = useRef({});
+  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,6 +25,57 @@ const App = () => {
       document.body.style.cursor = 'default';
     };
   }, []);
+
+  // Handle scroll navigation
+  useEffect(() => {
+    let timeoutId;
+    const handleScroll = () => {
+      if (isScrolling) return;
+
+      const sections = Object.entries(sectionsRef.current);
+      if (sections.length === 0) return;
+
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        const windowHeight = window.innerHeight;
+        const scrollPosition = window.scrollY + (windowHeight / 2);
+
+        // Find the current section based on scroll position
+        for (const [sectionId, sectionElement] of sections) {
+          const { top, bottom } = sectionElement.getBoundingClientRect();
+          const absoluteTop = top + window.scrollY;
+          const absoluteBottom = bottom + window.scrollY;
+
+          if (scrollPosition >= absoluteTop && scrollPosition <= absoluteBottom) {
+            setCurrentSection(sectionId);
+            break;
+          }
+        }
+      }, 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutId);
+    };
+  }, [isScrolling]);
+
+  // Handle navigation changes
+  useEffect(() => {
+    if (!sectionsRef.current[currentSection]) return;
+
+    setIsScrolling(true);
+    const targetSection = sectionsRef.current[currentSection];
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+
+    // Reset scrolling flag after animation
+    const timeout = setTimeout(() => {
+      setIsScrolling(false);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, [currentSection]);
 
   const pageVariants = {
     initial: {
@@ -49,8 +102,11 @@ const App = () => {
 
   const renderSection = () => {
     return (
-      <AnimatePresence mode="wait">
-        {currentSection === 'home' && (
+      <div className="sections-container">
+        <div
+          ref={el => sectionsRef.current['home'] = el}
+          className="section min-h-screen"
+        >
           <motion.div
             key="home"
             initial="initial"
@@ -60,8 +116,12 @@ const App = () => {
           >
             <Home />
           </motion.div>
-        )}
-        {currentSection === 'nosotros' && (
+        </div>
+
+        <div
+          ref={el => sectionsRef.current['nosotros'] = el}
+          className="section min-h-screen"
+        >
           <motion.div
             key="nosotros"
             initial="initial"
@@ -71,8 +131,8 @@ const App = () => {
           >
             <Nosotros />
           </motion.div>
-        )}
-      </AnimatePresence>
+        </div>
+      </div>
     );
   };
 
@@ -87,7 +147,7 @@ const App = () => {
             <ThreeCanvas />
           </Suspense>
           <motion.div className="content z-10 relative">
-            <Header setCurrentSection={setCurrentSection} />
+            <Header setCurrentSection={setCurrentSection} currentSection={currentSection} />
             {renderSection()}
           </motion.div>
         </>
