@@ -10,7 +10,7 @@ import Nosotros from './components/Nosotros';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentSection, setCurrentSection] = useState('home');
-  const sectionsRef = useRef({});
+  const sectionsRef = useRef({}); // Ref para secciones
   const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const App = () => {
     };
   }, []);
 
-  // Handle scroll navigation
+  // Manejar el desplazamiento para navegar entre secciones
   useEffect(() => {
     let timeoutId;
     const handleScroll = () => {
@@ -40,7 +40,7 @@ const App = () => {
         const windowHeight = window.innerHeight;
         const scrollPosition = window.scrollY + (windowHeight / 2);
 
-        // Find the current section based on scroll position
+        // Determinar la sección actual en función de la posición de desplazamiento
         for (const [sectionId, sectionElement] of sections) {
           const { top, bottom } = sectionElement.getBoundingClientRect();
           const absoluteTop = top + window.scrollY;
@@ -61,7 +61,7 @@ const App = () => {
     };
   }, [isScrolling]);
 
-  // Handle navigation changes
+  // Manejar el cambio de sección al hacer clic en los botones de navegación
   useEffect(() => {
     if (!sectionsRef.current[currentSection]) return;
 
@@ -69,7 +69,7 @@ const App = () => {
     const targetSection = sectionsRef.current[currentSection];
     targetSection.scrollIntoView({ behavior: 'smooth' });
 
-    // Reset scrolling flag after animation
+    // Restablecer la bandera de desplazamiento después de la animación
     const timeout = setTimeout(() => {
       setIsScrolling(false);
     }, 1000);

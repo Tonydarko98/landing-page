@@ -59,9 +59,9 @@ const TablaInteractivas = () => {
               }
             }}
           >
-            La comunidad hispanohablante internacional donde se puede aprender chino mandarín 
-            de manera accesible y personalizada. Nos dedicamos a ofrecer una educación de 
-            alta calidad, enfocada en las necesidades únicas de los hispanohablantes.
+            La comunidad que combina la pasión por la enseñanza del mandarín y la innovación tecnológica. 
+            Ofrecemos una experiencia de aprendizaje auténtica, 
+            con herramientas avanzadas y recursos interactivos con enfoque cultural para conectar a personas con China.
           </motion.p>
           
           <motion.button

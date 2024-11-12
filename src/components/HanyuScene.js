@@ -4,10 +4,9 @@ import { useGLTF, useAnimations, Environment, ContactShadows } from '@react-thre
 import { EffectComposer, SSAO, Bloom, HueSaturation } from '@react-three/postprocessing';
 import { MeshStandardMaterial, SRGBColorSpace } from 'three';
 import * as THREE from 'three';
+import gsap from 'gsap';
 
-const MODEL_PATH = process.env.PUBLIC_URL + '/assets/models/static/Hanyu.glb';
-
-// Hook personalizado para detectar el viewport
+// Define viewport hook at the top
 const useViewport = () => {
   const [viewport, setViewport] = useState({
     isMobile: window.innerWidth < 768,
@@ -30,6 +29,8 @@ const useViewport = () => {
 
   return viewport;
 };
+
+const MODEL_PATH = process.env.PUBLIC_URL + '/assets/models/static/Hanyu.glb';
 
 function Model({ mousePosition, scale }) {
   const { scene, animations } = useGLTF(MODEL_PATH);
@@ -102,33 +103,33 @@ const Effects = React.memo(() => (
   </EffectComposer>
 ));
 
-export default function HanyuScene() {
+export default function HanyuScene({ section }) {
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
   const { gl, camera, scene } = useThree();
   const viewport = useViewport();
 
-// Configuraciones responsivas
-const getResponsiveConfig = () => {
-  if (viewport.isMobile) {
-    return {
-      scale: 0.6,
-      cameraPosition: [0, 11, 7],
-      focalLength: 24,
-    };
-  } else if (viewport.isTablet) {
-    return {
-      scale: 0.8,
-      cameraPosition: [0, 16, 60],
-      focalLength: 60,
-    };
-  } else {
-    return {
-      scale: 1,
-      cameraPosition: [0, 24, 50],
-      focalLength: 30,
-    };
-  }
-};
+  // Configuraciones responsivas
+  const getResponsiveConfig = () => {
+    if (viewport.isMobile) {
+      return {
+        scale: 0.6,
+        cameraPosition: [0, 11, 7],
+        focalLength: 24,
+      };
+    } else if (viewport.isTablet) {
+      return {
+        scale: 0.8,
+        cameraPosition: [0, 16, 60],
+        focalLength: 60,
+      };
+    } else {
+      return {
+        scale: 1,
+        cameraPosition: [0, 24, 50],
+        focalLength: 30,
+      };
+    }
+  };
 
   const config = getResponsiveConfig();
 
@@ -142,6 +143,28 @@ const getResponsiveConfig = () => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [gl.domElement.clientWidth, gl.domElement.clientHeight]);
+
+  // Ajuste de la cámara en función de la sección activa
+  useEffect(() => {
+    const cameraPositions = {
+      Home: config.cameraPosition,
+      Nosotros: [0, 95, 10], // Posición de la cámara para la sección "Nosotros"
+      contacto: [0, 20, 70], // Otra sección, si lo necesitas
+    };
+
+    // Cámara para la sección activa
+    const targetCameraPosition = cameraPositions[section] || config.cameraPosition;
+
+    // Animar la transición de la cámara
+    gsap.to(camera.position, {
+      duration: 2,
+      x: targetCameraPosition[0],
+      y: targetCameraPosition[1],
+      z: targetCameraPosition[2],
+      ease: "power2.inOut",
+    });
+    camera.updateProjectionMatrix();
+  }, [section, camera, config]);
 
   useEffect(() => {
     const sensorWidth = 36;
